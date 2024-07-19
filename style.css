@@ -9,6 +9,10 @@ body {
 
 p1 {
   font-family: sans-serif;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 600px) {
