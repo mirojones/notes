@@ -63,6 +63,10 @@ hr {
   border: 0.5px solid black;
 }
 
+a {
+  color: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: #222;
