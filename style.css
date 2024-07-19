@@ -4,16 +4,18 @@ body {
   color: black;
   font-size: 13px;
   width: 600px;
+  margin: auto;
 }
 
 @media only screen and (max-width: 600px) {
   body {
-    width: 100%
+    width: 100%;
   }
 }
 
 hr {
   border: 0.5px solid black;
+}
 
 @media (prefers-color-scheme: dark) {
   body {
