@@ -10,6 +10,14 @@ body {
 header, footer {
   text-align: center;
 }
+
+textarea {
+  font-size: 1rem;
+}
+
+#noteInput {
+  width: 100%;
+}
   
 .note-demo {
   font-family: sans-serif;
