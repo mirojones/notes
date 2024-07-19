@@ -1,9 +1,5 @@
 body {
   font-family: monospace;
-  background-color: black;
-  color: #fefefe;
-}
-
-a {
-  color: white;
+  background-color: #eee;
+  color: black;
 }
