@@ -15,6 +15,11 @@ textarea {
   font-size: 1rem;
 }
 
+button {
+  font-size: 1rem;
+  margin: 5px 5px 5px 5px;
+}
+
 #noteInput {
   width: 100%;
 }
