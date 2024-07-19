@@ -30,6 +30,9 @@ button {
   background-color: #FF6719;
   color: white;
   border: 0;
+  width: auto;
+  height: auto;
+  padding: 5px 5px 5px 5px;
 }
 
 #noteInput {
