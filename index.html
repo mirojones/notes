@@ -26,7 +26,7 @@
 
       encodeButton.addEventListener("click", function() {
         const inputValue = textInput.value;
-        const encodedValue = encodeURIComponent(inputValue + "?");
+        const encodedValue = encodeURIComponent(inputValue);
         encodedText.value = 'https://substack.com/home?action=compose&message=' + encodedValue;
       });
     </script>
