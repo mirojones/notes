@@ -7,8 +7,8 @@ body {
   margin: auto;
 }
 
-.material-symbols-outlined {
-  cursor: default;
+#copyLink {
+  cursor: copy;
 }
 
 header, footer {
