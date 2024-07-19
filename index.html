@@ -12,11 +12,24 @@
     <main>
       <form id="note">
         <label for="noteInput">Your note</label>
-        <textarea id="noteInput" form="note"></textarea>
+        <textarea id="noteInput" form="note" placeholder="Your note"></textarea>
       </form>
+      <textarea id="outputURL" readonly placeholder="Your link will appear here"></textarea>
     </main>
     <footer>
       <p>&copy; Miro Jones</p>
     </footer>
+    <script>
+      const textInput = document.getElementById("noteInput");
+      const encodedText = document.getElementById("outputURL");
+      const encodeButton = document.getElementById("encodeButton");
+
+      encodeButton.addEventListener("click", function() {
+        const inputValue = textInput.value;
+        const encodedValue = encodeURIComponent(inputValue + "?");
+        encodedText.value = encodedValue;
+        console.log(`?x=${encodedValue}`);
+      });
+    </script>
   </body>
 </html>
