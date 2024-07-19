@@ -10,10 +10,10 @@
       <span>A tool by Miro Jones</span>
     </header>
     <main>
-      <form id="note">
-        <label for="noteInput">Your note</label>
-        <textarea id="noteInput" form="note" placeholder="Your note"></textarea>
-      </form>
+      <textarea id="noteInput" form="note" placeholder="Your note"></textarea>
+      <br>
+      <button id="encodeButton">Generate</button>
+      <br>
       <textarea id="outputURL" readonly placeholder="Your link will appear here"></textarea>
     </main>
     <footer>
@@ -27,7 +27,7 @@
       encodeButton.addEventListener("click", function() {
         const inputValue = textInput.value;
         const encodedValue = encodeURIComponent(inputValue + "?");
-        encodedText.value = encodedValue;
+        encodedText.value = 'https://substack.com/' + encodedValue;
         console.log(`?x=${encodedValue}`);
       });
     </script>
