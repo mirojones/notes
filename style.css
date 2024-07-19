@@ -2,4 +2,8 @@ body {
   font-family: monospace;
   background-color: #eee;
   color: black;
+  font-size: 13px;
 }
+
+hr {
+  border: 1px solid black;
