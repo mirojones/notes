@@ -7,6 +7,10 @@ body {
   margin: auto;
 }
 
+p1 {
+  font-family: sans-serif;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     width: calc(100% - 16px);
