@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Substack Notes Share Link Generator</title>
-
     <link rel="stylesheet" href="https://mirojones.github.io/notes/style.css">
   </head>
   <body>
@@ -11,8 +10,9 @@
       <span>A tool by Miro Jones</span>
     </header>
     <main>
-      <form>
-        <input type="text" placeholder="Your note">
+      <form id="note">
+        <label for="noteInput">Your note</label>
+        <textarea id="noteInput" form="note"></textarea>
       </form>
     </main>
     <footer>
