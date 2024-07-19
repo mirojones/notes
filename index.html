@@ -29,6 +29,22 @@
         const encodedValue = encodeURIComponent(inputValue);
         encodedText.value = 'https://substack.com/home?action=compose&message=' + encodedValue;
       });
+
+      // Copy to clipboard
+      function copyLink() {
+        // Get the text field
+        var copyText = document.getElementById("outputURL");
+
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
+
+        // Alert the copied text
+        alert("Link copied");
+      }
     </script>
   </body>
 </html>
