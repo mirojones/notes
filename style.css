@@ -7,3 +7,13 @@ body {
 
 hr {
   border: 0.5px solid black;
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #222;
+    color: white;
+  }
+  hr {
+    border: 0.5px solid white;
+  }
+}
