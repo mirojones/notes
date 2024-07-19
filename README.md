@@ -1,1 +1,1 @@
-# substack-notes-link
+# Share link generator for Substack Notes
