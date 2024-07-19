@@ -11,6 +11,10 @@ body {
   cursor: copy;
 }
 
+h1 {
+  color: #FF6719;
+}
+
 header, footer {
   text-align: center;
 }
@@ -22,6 +26,9 @@ textarea {
 button {
   font-size: 1rem;
   margin: 7px 0px 7px 0px;
+  background-color: #FF6719;
+  color: white;
+  border: 0;
 }
 
 #noteInput {
@@ -56,6 +63,9 @@ hr {
   }
   hr {
     border: 0.5px solid white;
+  }
+  h1 {
+    color: white;
   }
 }
 
