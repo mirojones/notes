@@ -11,6 +11,10 @@ body {
   cursor: copy;
 }
 
+.codepen {
+  width: calc(100% - 16px);
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #FF6719;
   cursor: pointer;
