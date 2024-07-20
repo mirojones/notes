@@ -39,7 +39,7 @@ button {
 }
 
 #noteInput {
-  width: 100%;
+  width: calc(100% - 16px);
 }
   
 .note-demo {
@@ -48,7 +48,7 @@ button {
   color: black;
   padding: 5px;
   border-radius: 5px;
-  width: 100%;
+  width: calc(100% - 16px);
   height: auto;
 }
 
