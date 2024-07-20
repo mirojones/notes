@@ -44,6 +44,9 @@ button {
 
 .code {
   width: calc(100% - 16px);
+  height: auto;
+  padding: 5px;
+  border-radius: 5px;
   background-color: #ddd;
   color: white;
   overflow-y: scroll;
