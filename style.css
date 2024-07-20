@@ -41,6 +41,14 @@ button {
 #noteInput {
   width: calc(100% - 16px);
 }
+
+.code {
+  width: calc(100% - 16px);
+  background-color: #ddd;
+  color: white;
+  overflow-y: scroll;
+  border: 0.5px solid black;
+}
   
 .note-demo {
   font-family: sans-serif;
