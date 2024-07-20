@@ -33,28 +33,34 @@
     <header>
       <h1 onclick="window.location.reload();">Substack Notes Share Link Generator</h1>
       <span>A tool by <a href="https://mirojones.github.io">Miro Jones</a>.</span>
+      <hr>
     </header>
     <main>
-      <hr>
-      <p>This link will open <a href="https://substack.com">Substack</a> and prefill a Note with your text. Use <kbd>@</kbd> to mention users.</p>
-      <textarea id="noteInput" form="note" placeholder="Your note" rows="6"></textarea>
-      <br>
-      <button id="encodeButton">Generate</button>
-      <br>
-      <textarea id="outputURL" rows="1" readonly placeholder="Your link will appear here"></textarea>
-      <span class="material-symbols-outlined" id="copyLink" onclick="copyLink()">content_copy</span>
+      <section id="generator">
+        <p>This link will open <a href="https://substack.com">Substack</a> and prefill a Note with your text. Use <kbd>@</kbd> to mention users.</p>
+        <textarea id="noteInput" form="note" placeholder="Your note" rows="6"></textarea>
+        <br>
+        <button id="encodeButton">Generate</button>
+        <br>
+        <textarea id="outputURL" rows="1" readonly placeholder="Your link will appear here"></textarea>
+        <span class="material-symbols-outlined" id="copyLink" onclick="copyLink()">content_copy</span>
+      </section>
+      <section id="demo">
       <h2>Demo</h2>
-      <p>Here's an <a target="_blank" href="https://substack.com/home?action=compose&message=Check%20out%20this%20Notes%20share%20link%20generator%20by%20%40mirojones%0Ahttps%3A%2F%2Fmirojones.github.io%2Fnotes">example link</a> for a Note which contains the text:</p>
-      <div class="note-demo">Check out this Notes share link generator by @mirojones<br>https://mirojones.github.io/notes</div>
-      <h2>Apple Shortcut</h2>
-      <p>This Shortcut works in exactly the same way as the website. Download it using this <a href="https://www.icloud.com/shortcuts/8b72a02998c446b7ad69eafd5c3cbaa6">iCloud link</a> or view the actions below.</p>
-      <ol>
-        <li>Recieve input from Share Sheet. If there's no input: Ask For Text.</li>
-        <li>URL Encode Shortcut Input</li>
-        <li>URL: https://substack.com/home?action=compose&message=<span class="shortcut-blue">URL Encoded Text</span></li>
-        <li>Copy "<span class="shortcut-blue">URL</span>" to clipboard</li>
-        <li>Show notification "Copied URL to clipboard"</li>
-      </ol>
+        <p>Here's an <a target="_blank" href="https://substack.com/home?action=compose&message=Check%20out%20this%20Notes%20share%20link%20generator%20by%20%40mirojones%0Ahttps%3A%2F%2Fmirojones.github.io%2Fnotes">example link</a> for a Note which contains the text:</p>
+        <div class="note-demo">Check out this Notes share link generator by @mirojones<br>https://mirojones.github.io/notes</div>
+      </section>
+      <section id="shortcut">
+        <h2>Apple Shortcut</h2>
+        <p>This Shortcut works in exactly the same way as the website. Download it using this <a href="https://www.icloud.com/shortcuts/8b72a02998c446b7ad69eafd5c3cbaa6">iCloud link</a> or view the actions below.</p>
+        <ol>
+          <li>Recieve input from Share Sheet. If there's no input: Ask For Text.</li>
+          <li>URL Encode Shortcut Input</li>
+          <li>URL: https://substack.com/home?action=compose&message=<span class="shortcut-blue">URL Encoded Text</span></li>
+          <li>Copy "<span class="shortcut-blue">URL</span>" to clipboard</li>
+          <li>Show notification "Copied URL to clipboard"</li>
+        </ol>
+      </section>
     </main>
     <footer>
       <hr>
