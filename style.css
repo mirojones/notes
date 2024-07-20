@@ -48,7 +48,7 @@ button {
   padding: 5px;
   border-radius: 5px;
   background-color: #ddd;
-  color: white;
+  color: black;
   overflow-y: scroll;
   border: 0.5px solid black;
 }
