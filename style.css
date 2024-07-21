@@ -7,6 +7,10 @@ body {
   margin: auto;
 }
 
+.shortcut-blue {
+  background-color: #42b6f5;
+}
+
 #copyLink {
   cursor: copy;
 }
