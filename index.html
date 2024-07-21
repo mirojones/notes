@@ -42,6 +42,18 @@
       <span>A tool by <a href="https://mirojones.github.io">Miro Jones</a>.</span>
       <div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" href="https://www.addtoany.com/share"><span class="material-symbols-outlined tools">share</span></a></div>
       <script async src="https://static.addtoany.com/menu/page.js"></script>
+      <script>
+	      // ➕ a2a script
+        var a2a_config = a2a_config || {};
+        a2a_config.onclick = 1;
+        a2a_config.custom_services = [
+          ["Substack Notes",
+            "https://substack.com/home?action=compose&message=A2A_LINKNAME_ENC%20%0AA2A_LINKURL_ENC",
+            "https://mirojones.github.io/notes/icons/substack.svg",
+          ],
+        ];
+        a2a_config.prioritize = [ 'x', 'facebook', 'whatsapp', 'print', 'copy_link' ];
+        a2a_config.exclude_services = [ 'amazon_wish_list' ];
       <hr>
     </header>
     <main>
