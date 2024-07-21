@@ -117,3 +117,5 @@ a {
 #outputURL {
   white-space: nowrap;
 }
+
+#share { display: flex; justify-content: center; }
