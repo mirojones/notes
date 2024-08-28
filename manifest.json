@@ -3,8 +3,8 @@
   "short_name": "Note Link Generator",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#fdfdfd",
-  "theme_color": "#db4938",
+  "background_color": "#eee",
+  "theme_color": "#FF6719",
   "orientation": "portrait-primary",
   "icons": [
     {
