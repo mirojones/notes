@@ -68,6 +68,7 @@
         <br>
         <textarea id="outputURL" rows="1" readonly placeholder="Your link will appear here"></textarea>
         <button onclick="copyLink()"><span class="material-symbols-outlined" id="copyLink">content_copy</span></button>
+	<button onclick="openLink()"><span class="material-symbols-outlined" id="openLink">open_in_new</span></button>
       </section>
       <section id="demo">
       <h2>Demo</h2>
@@ -116,6 +117,13 @@
 
         alert("Link copied");
       }
+
+      function openLink() {
+				encodedText.select();
+        encodedText.setSelectionRange(0, 99999);
+
+				window.open(encodedText.value);
+			}
     </script>
   </body>
 </html>
