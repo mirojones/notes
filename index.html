@@ -67,7 +67,8 @@
         <button id="encodeButton">Generate</button>
         <br>
         <textarea id="outputURL" rows="1" readonly placeholder="Your link will appear here"></textarea>
-        <span class="material-symbols-outlined" id="copyLink" onclick="copyLink()">content_copy</span>
+        <button onclick="copyLink()"><span class="material-symbols-outlined" id="copyLink">content_copy</span></button>
+				<button onclick="openLink()"><span class="material-symbols-outlined" id="openLink">open_in_url</span></button>
       </section>
       <section id="demo">
       <h2>Demo</h2>
@@ -109,19 +110,20 @@
 
       // Copy to clipboard
       function copyLink() {
-        // Get the text field
-        var copyText = document.getElementById("outputURL");
+        encodedText.select();
+        encodedText.setSelectionRange(0, 99999);
+				
+        navigator.clipboard.writeText(encodedText.value);
 
-        // Select the text field
-        copyText.select();
-        copyText.setSelectionRange(0, 99999); // For mobile devices
-
-        // Copy the text inside the text field
-        navigator.clipboard.writeText(copyText.value);
-
-        // Alert the copied text
         alert("Link copied");
       }
+
+			function openLink() {
+				encodedText.select();
+        encodedText.setSelectionRange(0, 99999); // For mobile devices
+
+				window.open(encodedText.value);
+			}
     </script>
   </body>
 </html>
