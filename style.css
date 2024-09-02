@@ -1,7 +1,7 @@
 body {
   font-family: sans-serif;
   background-color: #eee;
-  color: black;
+  color: #000;
   font-size: 1rem;
   width: 600px;
   margin: auto;
@@ -64,20 +64,8 @@ button {
 #noteInput {
   width: calc(100% - 16px);
 }
-
-.code {
-  width: calc(100% - 16px);
-  height: auto;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #ddd;
-  color: black;
-  overflow-y: scroll;
-  border: 0.5px solid black;
-}
   
 .note-demo {
-  font-family: sans-serif;
   background-color: white;
   color: black;
   padding: 5px;
@@ -89,12 +77,12 @@ button {
 @media only screen and (max-width: 600px) {
   body {
     width: calc(100% - 16px);
-    margin: 8px 8px 8px 8px;
+    margin: 2em;
   }
 }
 
 hr {
-  border: 0.5px solid black;
+  border: 0.5px solid #000;
 }
 
 a {
@@ -104,13 +92,13 @@ a {
 @media (prefers-color-scheme: dark) {
   body {
     background: #222;
-    color: white;
+    color: #fff;
   }
   hr {
-    border: 0.5px solid white;
+    border: 0.5px solid #fff;
   }
   h1 {
-    color: white;
+    color: #fff;
   }
 }
 
