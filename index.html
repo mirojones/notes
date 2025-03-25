@@ -1,122 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-AU">
   <head>
-    <title>Notes Share Link Generator</title>
+    <title>Notes Link Generator</title>
 
+		<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="manifest" href="manifest.json" />
+    <!-- metadata -->
+    <meta property="og:title" content="Notes Share Link Generator">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mirojones.github.io/notes">
+    <meta property="og:image" content="socialpreview.png">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Notes Share Link Generator" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mirojones.github.io/notes" />
-    <meta property="og:image" content="https://mirojones.github.io/notes/socialpreview.png" />
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://mirojones.github.io/notes/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://mirojones.github.io/notes/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://mirojones.github.io/notes/favicon-16x16.png">
-    <link rel="manifest" href="https://mirojones.github.io/notes/site.webmanifest">
-    <link rel="mask-icon" href="https://mirojones.github.io/notes/safari-pinned-tab.svg" color="#FF6719">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <!-- Symbols and emoji --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&family=Noto+Sans+Symbols+2&family=Noto+Sans+Symbols:wght@100..900&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://mirojones.github.io/notes/style.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
-      .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-      }
-    </style>
+		<style>
+			
+		</style>
   </head>
   <body>
     <header>
-      <h1 onclick="window.location.reload();">Substack Notes Share Link Generator</h1>
-      <p>A tool by <a href="https://mirojones.github.io" target="_blank" rel="author">Miro Jones</a>.</p>
-      <div id="share" class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" href="https://www.addtoany.com/share"><span class="material-symbols-outlined tools">share</span></a></div>
-      <script async src="https://static.addtoany.com/menu/page.js"></script>
-      <script>
-	// ➕ a2a script
-        var a2a_config = a2a_config || {};
-        a2a_config.onclick = 1;
-        a2a_config.custom_services = [
-          ["Substack Notes",
-            "https://substack.com/home?action=compose&message=A2A_LINKNAME_ENC%20%0AA2A_LINKURL_ENC",
-            "https://mirojones.github.io/notes/icons/substack.svg",
-          ],
-        ];
-        a2a_config.prioritize = [ 'x', 'facebook', 'whatsapp', 'print', 'copy_link' ];
-        a2a_config.exclude_services = [ 'amazon_wish_list' ];
-      </script>
-      <hr>
+      <h1>Substack Notes Link Generator</h1>
+			<p>Generate links to prefill a Substack Note with your message. Useful for sharing your website or project.</p>
+      <p>A tool by <a href="https://miro.boats" target="_blank" rel="author">Miro Jones</a>.</p>
     </header>
+		<hr>
     <main>
-      <section id="generator">
-        <p>This link will open <a href="https://substack.com">Substack</a> and prefill a Note with your text. Use <kbd>@</kbd> to mention users.</p>
-        <textarea id="noteInput" form="note" placeholder="Your note" rows="6"></textarea>
-        <br>
-        <button id="encodeButton">Generate</button>
-        <br>
-        <textarea id="outputURL" rows="1" readonly placeholder="Your link will appear here"></textarea>
-        <button onclick="copyLink()"><span class="material-symbols-outlined" id="copyLink">content_copy</span></button>
-	<button onclick="openLink()"><span class="material-symbols-outlined" id="openLink">open_in_new</span></button>
-      </section>
-      <section id="demo">
-      <h2>Demo</h2>
-        <p>Here's an <a target="_blank" href="https://substack.com/home?action=compose&message=Check%20out%20this%20Notes%20share%20link%20generator%20by%20%40mirojones%0Ahttps%3A%2F%2Fmirojones.github.io%2Fnotes">example link</a> for a Note which contains the text:</p>
-        <div class="note-demo">Check out this Notes share link generator by @mirojones<br>https://mirojones.github.io/notes</div>
-      </section>
-      <section id="shortcut">
-        <h2>Apple Shortcut</h2>
-        <p>This Shortcut works in exactly the same way as the website. Download it using this <a href="https://www.icloud.com/shortcuts/8b72a02998c446b7ad69eafd5c3cbaa6">iCloud link</a> or view the actions below.</p>
-        <ol>
-          <li><span class="emoji">⬇️</span>&nbsp;Recieve input from Share Sheet. If there's no input: Ask For Text.</li>
-          <li><span class="emoji">🔗</span>&nbsp;URL Encode Shortcut Input</li>
-          <li><span class="emoji">🔗</span>&nbsp;URL: https://substack.com/home?action=compose&message=<span class="shortcut-blue">URL Encoded Text</span></li>
-          <li><span class="emoji">📑</span>&nbsp;Copy "<span class="shortcut-blue">URL</span>" to clipboard</li>
-          <li><span class="emoji">🔔</span>&nbsp;Show notification "Copied URL to clipboard"</li>
-        </ol>
-      </section>
-      <section id="addtoany">
-        <h2>AddToAny Custom Service</h2>
-        <p>In order to add Substack Notes to your AddToAny share menus, insert the following line of JavaScript:</p>
-	<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="VwJaWyO" data-pen-title="Substack Notes AddToAny menu demo" data-editable="true" data-user="mirojones" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"><span>See the Pen <a href="https://codepen.io/mirojones/pen/VwJaWyO">Substack Notes AddToAny menu demo</a> by Miro (<a href="https://codepen.io/mirojones">@mirojones</a>)on <a href="https://codepen.io">CodePen</a>.</span></p><script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-      </section>
+			<p>Enter your message to generate a link to a <a href="https://substack.com" target="_blank" rel="noopener noreferrer">Substack</a> Note prefilled with your text. Use <kbd>@</kbd> to mention users.</p>
+			<textarea id="input" placeholder="Your note" rows="6"></textarea>
+			<output id="output">Your link will appear here</output>
+			<button id="copy">Copy link</button>
+			<a id="open">Open link</a>
     </main>
     <footer>
       <hr>
-      <p>&copy; 2024 Miro Jones. This site is not affiliated with <a href="https://substack.com/about" rel="nofollow">Substack Inc</a>. 'Substack' and the Substack logo are trademarks of Substack Inc.</p>
-      <p>This website is a PWA. Click 'Add to Homescreen' in your browser to use it like an app.</p>
+			<p>This site is open source. <a href="https://github.com/mirojones/notes">View on GitHub</a>.</p>
+      <p><small>This site is not affiliated with <a href="https://substack.com/about" rel="nofollow">Substack Inc</a>. 'Substack' and the Substack logo are trademarks of Substack Inc. Please note that this technique of linking to Notes is not officially supported by Substack, and may stop working at any time.</small></p>
     </footer>
     <script>
-      const textInput = document.getElementById("noteInput");
-      const encodedText = document.getElementById("outputURL");
-      const encodeButton = document.getElementById("encodeButton");
+      const input = document.getElementById("input"),
+				output = document.getElementById("output"),
+				copy = document.getElementById("copy"),
+				open = document.getElementById("open");
 
-      encodeButton.addEventListener("click", function() {
-        const inputValue = textInput.value;
-        const encodedValue = encodeURIComponent(inputValue);
-        encodedText.value = 'https://substack.com/home?action=compose&message=' + encodedValue;
+      input.addEventListener("input", () => {
+        output.value = 'https://substack.com/home?action=compose&message=' + encodeURIComponent(input.value);
       });
 
       // Copy to clipboard
-      function copyLink() {
-        encodedText.select();
-        encodedText.setSelectionRange(0, 99999);
-				
-        navigator.clipboard.writeText(encodedText.value);
-
-        alert("Link copied");
-      }
+      function copyDivToClipboard() {
+				var range = document.createRange();
+				range.selectNode(document.getElementById("a"));
+				window.getSelection().removeAllRanges(); // clear current selection
+				window.getSelection().addRange(range); // to select text
+				document.execCommand("copy");
+				window.getSelection().removeAllRanges();// to deselect
+			}
 
       function openLink() {
 				encodedText.select();
