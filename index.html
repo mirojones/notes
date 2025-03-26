@@ -36,7 +36,7 @@
         font-family: var(--font-title);
       }
 
-      textarea {
+      textarea, output {
         font-family: var(--font-input);
         margin-top: 20px;
       }
@@ -50,7 +50,7 @@
         font-size: 15px;
         padding: 8px 20px;
         margin-top: 20px;
-        
+        text-decoration: none;
       }
 
       button:hover {
@@ -82,7 +82,7 @@
 			<label>Enter your message to generate a link to a <a href="https://substack.com" target="_blank" rel="noopener noreferrer">Substack</a> Note prefilled with your text. Use <kbd>@</kbd> to mention users.<br>
 			  <textarea id="input" placeholder="Your note" rows="6" cols="27"></textarea>
       </label><br>
-			<textarea id="output" rows="1" cols="27" readonly>Your link will appear here</textarea><br>
+			<output id="output" for="input"></output><br>
 			<button id="copy" class="btn">Copy link</button>
 			<a id="open" class="btn">Open link</a>
     </main>
