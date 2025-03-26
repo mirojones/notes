@@ -82,7 +82,7 @@
 			<label>Enter your message to generate a link to a <a href="https://substack.com" target="_blank" rel="noopener noreferrer">Substack</a> Note prefilled with your text. Use <kbd>@</kbd> to mention users.<br>
 			  <textarea id="input" placeholder="Your note" rows="6" cols="27"></textarea>
       </label><br>
-			<output id="output" for="input">Generated link will appear here</output><br>
+			<output for="input">Your link: <span id="url">https://substack.com/home?action=compose&message=</span></output><br>
 			<button id="copy" class="btn">Copy link</button>
 			<a id="open" class="btn" target="_blank" rel="noopener noreferrer">Open link</a>
     </main>
@@ -93,17 +93,15 @@
     </footer>
     <script>
       const input = document.getElementById("input"),
-				output = document.getElementById("output"),
+				url = document.getElementById("url"),
         copy = document.getElementById("copy"),
 				open = document.getElementById("open");
 
       input.addEventListener("input", () => {
-        output.value = open.href = "https://substack.com/home?action=compose&message=" + encodeURIComponent(input.value);
+        url.value = open.href = `https://substack.com/home?action=compose&message=${encodeURIComponent(input.value)}`;
       });
 
-      // Copy to clipboard
-      
-      copy.addEventListener("click", () => writeClipboardText(output.value));
+      copy.addEventListener("click", () => writeClipboardText(url.textContent));
       async function writeClipboardText(text) {
         try {
           await navigator.clipboard.writeText(text);
@@ -111,14 +109,6 @@
           console.error(error.message);
         }
       }
-  
-
-      function openLink() {
-				encodedText.select();
-        encodedText.setSelectionRange(0, 99999);
-
-				window.open(encodedText.value);
-			}
     </script>
   </body>
 </html>
