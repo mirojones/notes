@@ -19,7 +19,7 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
 		
     <style>
-			:root {
+      :root {
         --font-body: -apple-system-ui-serif, ui-serif, "Spectral", "Georgia", serif;
         --font-input: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         --font-title: "SF Pro Display", -apple-system-headline, var(--font-input);
@@ -99,28 +99,28 @@
   <body>
     <header>
       <h1>Substack Notes Link Generator</h1>
-			<p>Generate links to prefill a Substack Note with your message. Useful for enabling sharing of your website or project.</p>
+      <p>Generate links to prefill a Substack Note with your message. Useful for enabling sharing of your website or project.</p>
       <p>A tool by <a href="https://miro.boats" target="_blank" rel="author">Miro Jones</a>.</p>
     </header>
-		<hr>
+    <hr>
     <main>
-			<label>Enter your message to generate a link to a <a href="https://substack.com" target="_blank" rel="noopener noreferrer">Substack</a> Note prefilled with your text. Use <kbd>@</kbd> to mention users.<br>
-			  <textarea id="input" placeholder="Your note" rows="6"></textarea>
+      <label>Enter your message to generate a link to a <a href="https://substack.com" target="_blank" rel="noopener noreferrer">Substack</a> Note prefilled with your text. Use <kbd>@</kbd> to mention users.<br>
+        <textarea id="input" placeholder="Your note" rows="6"></textarea>
       </label><br>
-			<output for="input">Your link: <span id="url">https://substack.com/home?action=compose&message=</span></output><br>
-			<button id="copy" class="btn">Copy link</button>
-			<a id="open" class="btn" target="_blank" rel="noopener noreferrer">Open link</a>
+      <output for="input">Your link: <span id="url">https://substack.com/home?action=compose&message=</span></output><br>
+      <button id="copy" class="btn">Copy link</button>
+      <a id="open" class="btn" target="_blank" rel="noopener noreferrer">Open link</a>
     </main>
     <hr>
     <footer>
-			<p>This site is open source. <a href="https://github.com/mirojones/notes" target="_blank" rel="noopener noreferrer">View on GitHub</a>.</p>
+      <p>This site is open source. <a href="https://github.com/mirojones/notes" target="_blank" rel="noopener noreferrer">View on GitHub</a>.</p>
       <p><small>This site is not affiliated with <a href="https://substack.com/about" rel="nofollow">Substack Inc</a>. 'Substack' and the Substack logo are trademarks of Substack Inc. Please note that this technique of linking to Notes is not officially supported by Substack, and may stop working at any time.</small></p>
     </footer>
     <script>
       const input = document.getElementById("input"),
-				url = document.getElementById("url"),
+	url = document.getElementById("url"),
         copy = document.getElementById("copy"),
-				open = document.getElementById("open");
+	open = document.getElementById("open");
 
       input.addEventListener("input", () => {
         url.textContent = open.href = `https://substack.com/home?action=compose&message=${encodeURIComponent(input.value)}`;
