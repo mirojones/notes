@@ -30,10 +30,18 @@
         --color-bg: #fff;
       }
 
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --color-txt: #eee;
+          --color-bg: #2b2823;
+        }
+      }
+
       body {
         font-family: var(--font-body);
         font-size: var(--font-size);
-        background-color: #fff;
+        background-color: var(--color-bg);
         max-width: 600px;
         margin: auto;
         padding: 1em;
