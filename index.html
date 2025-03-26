@@ -98,7 +98,7 @@
 				open = document.getElementById("open");
 
       input.addEventListener("input", () => {
-        url.value = open.href = `https://substack.com/home?action=compose&message=${encodeURIComponent(input.value)}`;
+        url.textContent = open.href = `https://substack.com/home?action=compose&message=${encodeURIComponent(input.value)}`;
       });
 
       copy.addEventListener("click", () => writeClipboardText(url.textContent));
