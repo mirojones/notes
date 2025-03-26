@@ -47,11 +47,11 @@
       textarea, output {
         font-family: var(--font-input);
         margin-top: 20px;
+        width: 100%;
       }
 
       output {
         display: inline-block;
-        width: 100%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -97,7 +97,7 @@
 		<hr>
     <main>
 			<label>Enter your message to generate a link to a <a href="https://substack.com" target="_blank" rel="noopener noreferrer">Substack</a> Note prefilled with your text. Use <kbd>@</kbd> to mention users.<br>
-			  <textarea id="input" placeholder="Your note" rows="6" cols="27"></textarea>
+			  <textarea id="input" placeholder="Your note" rows="6"></textarea>
       </label><br>
 			<output for="input">Your link: <span id="url">https://substack.com/home?action=compose&message=</span></output><br>
 			<button id="copy" class="btn">Copy link</button>
