@@ -41,7 +41,7 @@
         margin-top: 20px;
       }
 
-      button {
+      .btn {
         font-family: var(--font-input);
         background-color: var(--color-accent);
         color: var(--color-bg);
@@ -83,8 +83,8 @@
 			  <textarea id="input" placeholder="Your note" rows="6" cols="27"></textarea>
       </label><br>
 			<textarea id="output" rows="1" cols="27" readonly>Your link will appear here</textarea><br>
-			<button id="copy">Copy link</button>
-			<button id="open">Open link</button>
+			<button id="copy" class="btn">Copy link</button>
+			<a id="open" class="btn">Open link</a>
     </main>
     <hr>
     <footer>
@@ -93,21 +93,25 @@
     </footer>
     <script>
       const input = document.getElementById("input"),
-				output = document.getElementById("output");
+				output = document.getElementById("output"),
+        copy = document.getElementById("copy"),
+				open = document.getElementById("open");
 
       input.addEventListener("input", () => {
         output.value = "https://substack.com/home?action=compose&message=" + encodeURIComponent(input.value);
       });
 
       // Copy to clipboard
-      function copyLink() {
-        output.select();
-        output.setSelectionRange(0, 99999);
-				
-        navigator.clipboard.writeText(output.value);
-
-        alert("Link copied");
+      
+      copy.addEventListener("click", () => writeClipboardText(output.value));
+      async function writeClipboardText(text) {
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch (error) {
+          console.error(error.message);
+        }
       }
+  
 
       function openLink() {
 				encodedText.select();
