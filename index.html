@@ -84,7 +84,7 @@
       </label><br>
 			<output id="output" for="input"></output><br>
 			<button id="copy" class="btn">Copy link</button>
-			<a id="open" class="btn">Open link</a>
+			<a id="open" class="btn" target="_blank" rel="noopener noreferrer">Open link</a>
     </main>
     <hr>
     <footer>
@@ -98,7 +98,7 @@
 				open = document.getElementById("open");
 
       input.addEventListener("input", () => {
-        output.value = "https://substack.com/home?action=compose&message=" + encodeURIComponent(input.value);
+        output.value = open.href = "https://substack.com/home?action=compose&message=" + encodeURIComponent(input.value);
       });
 
       // Copy to clipboard
