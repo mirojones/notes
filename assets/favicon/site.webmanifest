@@ -1,6 +1,7 @@
 {
   "name": "Notes Link Generator",
-  "short_name": "Notes Link Generator",
+  "short_name": "Note Links",
+  "description": "Generate links to prefill a Substack Note with your message. Useful for enabling sharing of your website or project.",
   "icons": [
     {
       "src": "/assets/favicon/web-app-manifest-192x192.png",
