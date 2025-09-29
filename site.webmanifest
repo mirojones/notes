@@ -2,6 +2,7 @@
   "name": "Notes Link Generator",
   "short_name": "Note Links",
   "description": "Generate links to prefill a Substack Note with your message. Useful for enabling sharing of your website or project.",
+  "start_url": "https://www.miro.boats/notes/",
   "icons": [
     {
       "src": "favicon.svg",
