@@ -4,15 +4,14 @@
   "description": "Generate links to prefill a Substack Note with your message. Useful for enabling sharing of your website or project.",
   "icons": [
     {
-      "src": "/assets/favicon/web-app-manifest-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     },
     {
-      "src": "/assets/favicon/web-app-manifest-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "maskable"
     }
   ],
