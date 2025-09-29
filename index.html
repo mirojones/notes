@@ -132,6 +132,10 @@
           console.error(error.message);
         }
       }
+
+      if (typeof navigator.serviceWorker !== "undefined") {
+        navigator.serviceWorker.register("sw.js");
+      }
     </script>
   </body>
 </html>
